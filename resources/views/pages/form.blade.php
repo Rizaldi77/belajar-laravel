@@ -7,7 +7,9 @@
 
 <br>
 <div class="container">
-<h1>Pengisian Form ULT</h1>
+<div class="judul">
+    <h1>Pengisian Formulir ULT</h1>
+</div>/
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -27,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <label>Instansi</label>
-                            <input type="text" class="form-control" name="instansi" value="{{ old('instansi') }}">
+                            <input type="/text" class="form-control" name="instansi" value="{{ old('instansi') }}">
                         </div>
                         <div class="form-group">
                             <label>No KTP / SIM</label>
@@ -41,16 +43,13 @@
                             <label>Email</label>
                             <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                         </div>
-                        <div>
-                            <label>Pilih Loket yang dituju</label>
-                            <select type="text" class="form-control" name="loket" value="{{ old('loket') }}">
-                              <option selected disabled value="">Loket yang dituju</option>
-                              <option value="1">Sumber Daya</option>
-                              <option value="2">Akademik Kemahasiswaan</option>
-                              <option value="3">Kelembagaan</option>
-                              <option value="4">Sistem Informasi dan Kerjasama</option>
-                              <option value="5">TU dan Barang Milik Negara</option>
-                              <option value="6">Perencanaan dan Penganggaran</option>
+                        <div class="form-group">
+                            <label>Pilih Loket atau Layanan yang dituju</label>
+                            <select id="cmbobox" type="text" class="form-control" name="loket" value="{{ old('loket') }}">
+                              <option></option>
+                              @foreach($data as $d)
+                              <option value="{{$d->id}}">{{$d->namaloket}}</option>
+                              @endforeach
                             </select>
                         </div>
                         <div class="form-group">
@@ -67,3 +66,11 @@
         </div>
     </div>
 </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript">
+        $("#cmbobox").select2({
+              placeholder: 'Pilih Layanan',
+              allowClear: true
+          });
+      </script>

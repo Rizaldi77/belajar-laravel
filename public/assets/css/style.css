@@ -56,7 +56,7 @@ h6 {
 }
 
 .back-to-top i:hover {
-    background: #14b1ff;
+    background: #5f5f5f;
     color: #fff;
 }
 
@@ -127,7 +127,7 @@ h6 {
 }
 
 .header-social-links a:hover {
-    color: #1d7cbf;
+    color: #5f5f5f;
 }
 
 @media (max-width: 768px) {
@@ -166,7 +166,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
-    color: #2977ec;
+    color: #5f5f5f;
     text-decoration: none;
 }
 
@@ -205,7 +205,7 @@ h6 {
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active>a,
 .nav-menu .drop-down ul li:hover>a {
-    color: #1d7cbf;
+    color: #5f5f5f;
 }
 
 .nav-menu .drop-down>a:after {
@@ -498,6 +498,7 @@ h6 {
         font-size: 20px;
     }
 }
+
 /*--------------------------------------------------------------
 # Sections Admin
 --------------------------------------------------------------*/
@@ -1776,151 +1777,184 @@ section {
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;700&display=swap');
 
+.row {
+    justify-content: center;
+    flex-direction: row;
+}
+
 .kartu {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
 }
 
 .kartu body {
-  font-family: 'Dosis', sans-serif;
-  line-height: 1.5rem;
-  background-color: #333;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.5rem;
+    background-color: #333;
 }
-
-.row pb-5 mb-4{
-    align-items: center;
-}
-
 
 .kartu a {
-  text-decoration: none;
-  color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .kartu-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .cards {
-  position: relative;
-  min-width: 250px;
-  max-width: 25%;
-  height: 350px;
-  color: #ffffff;
-  margin: 0.5rem auto;
-  border-radius: 20px;
+    position: relative;
+    min-width: 250px;
+    max-width: 25%;
+    height: 350px;
+    color: #ffffff;
+    margin: 0.5rem auto;
+    border-radius: 20px;
 }
 
 .kartu-content {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 8%;
-  padding: 1rem;
-  margin: auto;
-  line-height: 1.6;
-  
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 8%;
+    padding: 1rem;
+    margin: auto;
+    line-height: 1.6;
+
 }
 
 .kartu-content h3 {
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 2rem;
-  padding: 1rem;
-  transition: all 0.5s ease;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2rem;
+    padding: 1rem;
+    transition: all 0.5s ease;
 }
 
 .kartu-content p,
 .kartu-content .kartu-btn {
-  display: none;
+    display: none;
 }
 
 /* Card image */
 .kartu-container .card-1 {
-  background: url(https://source.unsplash.com/tpXhecfsGVg/1000x1500) no-repeat center center/cover;
+    background: url(https://source.unsplash.com/tpXhecfsGVg/1000x1500) no-repeat center center/cover;
 }
 
 .kartu-container .card-2 {
-  background: url(https://source.unsplash.com/qmnpqDwla_E/800x450) no-repeat center center/cover;
+    background: url(https://source.unsplash.com/qmnpqDwla_E/800x450) no-repeat center center/cover;
 }
 
 .kartu-container .card-3 {
-  background: url(https://source.unsplash.com/sPPIyVH1DHk/873x1310) no-repeat center center/cover;
+    background: url(https://source.unsplash.com/sPPIyVH1DHk/873x1310) no-repeat center center/cover;
 }
 
 /* Add a dark overlay for text visibility */
 .cards::before {
-  content: '';
-  position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  transition: all 0.5s ease;
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.5s ease;
 }
 
 /* Tags */
 .cards .kartu-tags {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
 }
 
 .cards .kartu-tags {
-  padding: 1rem;
-  justify-content: center;
-  margin: 1rem auto;
+    padding: 1rem;
+    justify-content: center;
+    margin: 1rem auto;
 }
 
 /* Button */
 .kartu-btn {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  border-bottom: 1px dotted;
-  border-top: 1px dotted;
-  margin: 1.2rem auto;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 1px dotted;
+    border-top: 1px dotted;
+    margin: 1.2rem auto;
 }
+
 .kartu-btn:hover {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 /* Hover */
 .kartu-content:hover {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .cards:hover::before {
-  content: '';
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px #535353;
-  transition: all 0.5s ease;
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px #535353;
+    transition: all 0.5s ease;
 }
 
-.kartu-content:hover + div {
-  display: none;
+.kartu-content:hover+div {
+    display: none;
 }
 
 .kartu-content:hover p,
 .kartu-content:hover .kartu-btn {
-  display:block;
-  transform: translateY(-30px);
+    display: block;
+    transform: translateY(-30px);
 }
 
 .kartu-content:hover h3 {
-  transform: scale(0.8) translateY(-30px);
+    transform: scale(0.8) translateY(-30px);
+}
+
+.judul h1 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #242512;
+}
+
+.kpsntlsn {
+    text-align: center;
+}
+
+.kpsntlsn>input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.kpsntlsn>div {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.kpsntlsn>div:hover {
+    border: 1px solid #5353;
+}
+
+.kpsntlsn>input:checked+div {
+    background-color: #b1b1b1;
+    padding: 5px;
 }

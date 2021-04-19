@@ -18,14 +18,17 @@
         <img src="assets/img/kemendikbudlogo.png" class="img-fluid" alt="Logo Kemendikbud">
         </div>
     </div>
-    </div>
+</div>
+    
 
     </section><!-- End Hero -->
     <br>
     <br>
 
     <main id="main">
-      <div class="row pb-5 mb-4">
+  <div class="container">
+    <div class="row-box">
+    <div class ="row">
     @foreach($loket as $p)
         <div class="kartu">
             <div class="kartu-container">
@@ -43,6 +46,8 @@
                 </div>
             </div>
         </div>
-        @endforeach
+    @endforeach
+</div>
+</div>
 </div>
 @endsection

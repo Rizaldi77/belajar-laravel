@@ -14,16 +14,13 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'welcome'])->name('home');
 Route::get('/form', [App\Http\Controllers\FormController::class, 'create'])->name('form');
 Route::post('/proses', [App\Http\Controllers\FormController::class, 'proses']);
 
-Route::get('/loket', [App\Http\Controllers\LoketController::class, 'index'])->name('loket');
+Route::get('/', [App\Http\Controllers\LoketController::class, 'index'])->name('loket');
 
 
 
@@ -34,3 +31,8 @@ Route::post('/feedbackproses', [App\Http\Controllers\FeedbackController::class, 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/crudloket', [App\Http\Controllers\CrudController::class, 'index'])->name('crud');
+Route::get('/admin/create', [App\Http\Controllers\CrudController::class, 'create'])->name('create');
+Route::get('/admin/store', [App\Http\Controllers\CrudController::class, 'store'])->name('store');
+

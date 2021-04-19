@@ -14,17 +14,16 @@ class CreateFormsTable extends Migration
     public function up()
     {
         Schema::create('forms', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->string('email');
-            $table->date('dob');
-            $table->text('address')->nullable();
-            $table->timestamps();
-            $table->string('nohp');
+            $table->text('address');
+            $table->string('notelp');
             $table->string('noktp');
             $table->string('instansi');
             $table->string('loket');
             $table->text('keperluan');
+            $table->timestamp('created_at');
         });
     }
 
